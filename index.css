@@ -1,0 +1,51 @@
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+h1 { 
+  box-shadow: .6em 0 0 #05ffa3;
+  margin: 2rem 1rem;
+  width: 23ch;
+  overflow: hidden;
+  color: rgb(17, 8, 8);
+  white-space: nowrap;
+  animation: caret .5s step-end infinite alternate,
+             type 5s steps(23, end)
+}
+
+
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+
+}
+@keyframes caret { 
+  50% { 
+    box-shadow: .6em 0 0 transparent;
+  }
+}
+
+@use postcss-preset-env {
+  stage: 0;
+  autoprefixer: {
+    grid: true;
+  }
+  browsers: [
+    "last 1 Chrome versions",
+    "last 1 Firefox versions",
+    "last 1 Safari versions",
+    "last 1 Edge versions"
+  ]
+}
+body {
+  background-color: rgb(15, 87, 87);
+}
